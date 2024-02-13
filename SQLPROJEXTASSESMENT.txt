@@ -1,0 +1,25 @@
+Project Query
+Qurey 1
+select * from users;
+
+Qurey 2
+select * from progress;
+
+Qurey 3
+select email_domain, user_id from users where email_domain like '%.edu' order by 2 desc limit 25;
+
+Qurey 4
+select count(*) from users where city="New York" and email_domain like "%.edu";
+
+Qurey 5
+SELECT count(*) FROM users WHERE mobile_app ="mobile-user" OR mobile_app IS NULL;
+
+Qurey 6
+SELECT strftime('%H', sign_up_at), COUNT(*)FROM users GROUP BY 1;
+
+
+Qurey 7
+select* fromusers u LEFT JOIN progress p ON u.user_id = p.user_id  where u.city = 'New York';
+
+Qurey 8
+SELECT * FROM users u LEFT JOIN progress p ON u.user_id = p.user_id WHERE u.city = 'Chicago';
